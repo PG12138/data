@@ -1,7 +1,8 @@
 var fs = require("fs");
-function handleData () {
-    var data = fs.readFileSync("./00.txt", "utf-8");
+function handleData (index, day) {
+    var data = fs.readFileSync("./" + index + ".txt", "utf-8");
+    data = data.split(day)[0];
     return data;
 }
 
-handleData();
+handleData(
